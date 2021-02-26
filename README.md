@@ -1,2 +1,2 @@
 # oauth2-openid
-Autneticaçã com conta google utilizando OAtuh2 e OpenID
+Autneticação com conta Google utilizando OAtuh2 e OpenID
