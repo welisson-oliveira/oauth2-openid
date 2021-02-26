@@ -1,0 +1,30 @@
+server.port: 8080
+
+oauth:
+  enabled: true
+  all-in-one: true
+
+## configuracoes open id
+## informações encontradas no document discovery -> https://accounts.google.com/.well-known/openid-configuration
+google:
+  client_id: 104107796043-p08nmipj7arafnhfeho7lt0n7eemk6in.apps.googleusercontent.com
+  client_secret: -sqIFpsdYqfb30FdleKIGgK6
+  access_token_uri: https://www.googleapis.com/oauth2/v4/token
+  user_authorization_uri: https://accounts.google.com/o/oauth2/v2/auth
+  redirect_uri: http://localhost:8080/google/callback
+  userinfo_endpoint: https://www.googleapis.com/oauth2/v3/userinfo #busca dados do usuario apos autenticação
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/bookserver
+    username: bookserver
+    password: 123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        show_sql: true
+        hbm2ddl:
+          auto: validate
